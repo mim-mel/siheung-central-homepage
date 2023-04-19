@@ -132,7 +132,7 @@ const Nav = () => {
 
   return (
     <NavWrap>
-      <WebLogo src='/image/logo.png' />
+      <WebLogo src='/image/logo.png' onClick={() => router.push('/')} />
       <MobileLogo src='/image/logo-m.png' />
       {IsMenu ? (
         <BurgerLogo onClick={() => isMenuToggle()} src='/image/x-mark.png' />
@@ -325,7 +325,8 @@ const Nav = () => {
 };
 
 const NavWrap = styled.div`
-  position: absolute;
+  position: fixed;
+  z-index: 100;
   left: 0;
   top: 0;
   width: 338px;
@@ -351,6 +352,7 @@ const NavWrap = styled.div`
 
 const WebLogo = styled.img`
   margin-top: 4vh;
+  cursor: pointer;
 
   @media screen and (max-width: 1024px) {
     display: none;
