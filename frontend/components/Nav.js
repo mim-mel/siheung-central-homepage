@@ -389,9 +389,13 @@ const Triangle = styled.div`
   border-left: 15px solid transparent;
   border-right: 15px solid #623d30;
   position: absolute;
-  left: 90%;
+  left: 92%;
   display: none;
   opacity: 0;
+
+  @media screen and (max-width: 1700px) {
+    left: 90%;
+  }
 `;
 
 const HoverWrap = styled.div`
