@@ -187,8 +187,8 @@ const Main = () => {
 
 const Wrap = styled.div`
   position: relative;
-  left: 17%;
-  width: 83%;
+  left: 18%;
+  width: 82%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -198,10 +198,15 @@ const Wrap = styled.div`
   top: 0;
   overflow: hidden;
 
+  @media screen and (max-width: 1700px) {
+    left: 18%;
+    width: 82%;
+  }
+
   @media screen and (max-width: 1024px) {
     width: 100%;
     left: 0;
-    height: 85vh;
+    height: 90vh;
   }
 
   @media screen and (max-width: 700px) {
@@ -222,13 +227,16 @@ const MainBack = styled.div`
   left: 0;
   top: 0;
 
+  @media screen and (max-width: 1700px) {
+  }
+
   @media screen and (max-width: 1024px) {
-    width: 180%;
+    width: 190%;
     background-size: 100%;
     background-repeat: no-repeat;
     height: 1000px;
     top: 60px;
-    left: -100px;
+    left: -120px;
   }
 
   @media screen and (max-width: 700px) {
@@ -244,10 +252,16 @@ const TextWrap = styled.div`
   top: 18%;
   left: 47.5%;
 
+  @media screen and (max-width: 1700px) {
+    width: 45%;
+    left: 46%;
+  }
+
   @media screen and (max-width: 1024px) {
+    width: 650px;
     left: 50%;
     transform: translate(-50%, 0);
-    top: 27%;
+    top: 38%;
   }
 
   @media screen and (max-width: 700px) {
@@ -262,6 +276,16 @@ const HospitalName = styled.div`
   color: white;
   margin-bottom: 50px;
 
+  @media screen and (max-width: 1700px) {
+    font-size: 42px;
+    margin-bottom: 40px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    font-size: 48px;
+    margin-bottom: 30px;
+  }
+
   @media screen and (max-width: 700px) {
     font-size: 40px;
     text-align: center;
@@ -274,6 +298,15 @@ const HopitalText = styled.div`
   font-weight: 400;
   color: white;
   line-height: 38px;
+
+  @media screen and (max-width: 1700px) {
+    font-size: 17px;
+  }
+
+  @media screen and (max-width: 1700px) {
+    font-size: 18px;
+    line-height: 30px;
+  }
 
   @media screen and (max-width: 700px) {
     font-size: 13px;
@@ -291,13 +324,18 @@ const SliderWrap = styled.div`
   transform: translate(-50%, 0);
   overflow-x: hidden;
 
+  @media screen and (max-width: 1700px) {
+    width: 1030px;
+    top: 57%;
+  }
+
   @media screen and (max-width: 1024px) {
     width: 80%;
-    top: 58%;
+    top: 62%;
   }
 
   @media screen and (max-width: 700px) {
-    top: 65%;
+    top: 70%;
     width: 90%;
     left: 49%;
   }
@@ -310,6 +348,10 @@ const SliderWrap2 = styled.div`
   position: relative;
   left: ${props => '-' + props.count * 640 + 'px'};
   transition: 0.3s;
+
+  @media screen and (max-width: 1700px) {
+    left: ${props => '-' + props.count * 520 + 'px'};
+  }
 
   @media screen and (max-width: 1024px) {
     left: ${props => '-' + props.count * 670 + 'px'};
@@ -330,7 +372,15 @@ const SliderBox = styled.div`
   position: relative;
   overflow: hidden;
 
+  @media screen and (max-width: 1700px) {
+    width: 240px;
+    height: 300px;
+    margin-right: 20px;
+  }
+
   @media screen and (max-width: 1024px) {
+    width: 290px;
+    height: 350px;
     margin-right: 0;
     margin: 0 30px 0 25px;
   }
@@ -367,6 +417,16 @@ const SliderTextWrap = styled.div`
   justify-content: center;
   align-items: center;
 
+  @media screen and (max-width: 1700px) {
+    height: 150px;
+    top: 150px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    height: 150px;
+    top: 200px;
+  }
+
   @media screen and (max-width: 700px) {
     height: 70px;
     top: 130px;
@@ -391,6 +451,14 @@ const SliderTitle = styled.div`
   z-index: 10;
   margin-bottom: 10px;
 
+  @media screen and (max-width: 1700px) {
+    font-size: 20px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    font-size: 22px;
+  }
+
   @media screen and (max-width: 700px) {
     font-size: 13px;
     margin-bottom: 0;
@@ -405,6 +473,15 @@ const SliderText = styled.div`
   text-align: center;
   z-index: 10;
   margin-bottom: 3px;
+
+  @media screen and (max-width: 1700px) {
+    font-size: 11px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    font-size: 12px;
+  }
+
   @media screen and (max-width: 700px) {
     display: none;
   }
@@ -428,6 +505,14 @@ const SliderButton = styled.div`
 
   &:hover {
     top: -3px;
+  }
+
+  @media screen and (max-width: 1700px) {
+    height: 31px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    height: 33px;
   }
 
   @media screen and (max-width: 700px) {
@@ -459,6 +544,11 @@ const SliderWebArrowWrap = styled.div`
   align-items: center;
   justify-content: space-between;
 
+  @media screen and (max-width: 1700px) {
+    width: 1130px;
+    top: 70%;
+  }
+
   @media screen and (max-width: 1024px) {
     display: none;
   }
@@ -477,12 +567,13 @@ const SliderMobileArrowWrap = styled.div`
   display: none;
 
   @media screen and (max-width: 1024px) {
+    top: 76%;
     display: flex;
   }
 
   @media screen and (max-width: 700px) {
     width: 98%;
-    top: 73%;
+    top: 79%;
   }
 `;
 
@@ -528,6 +619,10 @@ const MemberButton = styled.div`
   align-items: center;
   animation: ${MemberButtonAni} 3s infinite;
   cursor: pointer;
+
+  @media screen and (max-width: 1020px) {
+    display: none;
+  }
 `;
 
 const MemberImgWrap = styled.div`

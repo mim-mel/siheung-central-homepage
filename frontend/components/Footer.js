@@ -46,11 +46,16 @@ const FooterWrap = styled.div`
   position: relative;
   height: 300px;
   background-color: #2e2e2e;
-  left: 17%;
-  width: 83%;
+  left: 18%;
+  width: 82%;
   justify-content: center;
   align-items: center;
   display: flex;
+
+  @media screen and (max-width: 1700px) {
+    left: 18%;
+    width: 82%;
+  }
 
   @media screen and (max-width: 1024px) {
     width: 100%;
@@ -70,6 +75,10 @@ const FooterContentsWrap = styled.div`
   grid-template-columns: 15% 65% 20%;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 1700px) {
+    width: 90%;
+  }
 
   @media screen and (max-width: 1024px) {
     width: 100%;

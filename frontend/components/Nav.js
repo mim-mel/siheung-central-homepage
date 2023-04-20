@@ -329,7 +329,7 @@ const NavWrap = styled.div`
   z-index: 100;
   left: 0;
   top: 0;
-  width: 338px;
+  width: 18%;
   height: 100vh;
   background-color: #ad9686;
   display: flex;
@@ -353,6 +353,10 @@ const NavWrap = styled.div`
 const WebLogo = styled.img`
   margin-top: 4vh;
   cursor: pointer;
+
+  @media screen and (max-width: 1700px) {
+    transform: scale(85%);
+  }
 
   @media screen and (max-width: 1024px) {
     display: none;
@@ -385,7 +389,7 @@ const Triangle = styled.div`
   border-left: 15px solid transparent;
   border-right: 15px solid #623d30;
   position: absolute;
-  left: 308px;
+  left: 90%;
   display: none;
   opacity: 0;
 `;
@@ -397,7 +401,7 @@ const HoverWrap = styled.div`
   background-color: #623d30;
   position: absolute;
   top: 0;
-  left: 338px;
+  left: 100%;
   overflow: hidden;
   transition: 0.3s;
 
@@ -516,6 +520,10 @@ const NavTitle = styled.div`
   margin-bottom: ${props => props.marginBottom};
   cursor: pointer;
 
+  @media screen and (max-width: 1700px) {
+    font-size: 19px;
+  }
+
   @media (hover: hover) {
     :hover ${Triangle} {
       display: flex;
@@ -574,6 +582,11 @@ const InformWrap = styled.div`
   padding: 20px 25px;
   box-sizing: border-box;
 
+  @media screen and (max-width: 1700px) {
+    width: 90%;
+    padding: 20px 23px;
+  }
+
   @media screen and (max-width: 1024px) {
     display: none;
   }
@@ -585,6 +598,10 @@ const BoxTitle = styled.div`
   color: #623d30;
   margin-bottom: ${props => props.marginBottom};
   margin-top: 1.8vh;
+
+  @media screen and (max-width: 1700px) {
+    font-size: 19px;
+  }
 `;
 
 const InfoTextWrap = styled.div`
@@ -612,6 +629,10 @@ const InfoText = styled.div`
     color: #916459;
     font-weight: 600;
   }
+
+  @media screen and (max-width: 1700px) {
+    font-size: 12px;
+  }
 `;
 
 const TimeWrap = styled.div`
@@ -625,6 +646,11 @@ const TimeWrap = styled.div`
   justify-content: center;
   padding: 10px 25px;
   box-sizing: border-box;
+
+  @media screen and (max-width: 1700px) {
+    width: 90%;
+    padding: 10px 23px;
+  }
 
   @media screen and (max-width: 1024px) {
     display: none;
@@ -646,6 +672,10 @@ const ButtonText = styled.div`
   font-weight: 600;
   margin-right: 8px;
   color: white;
+
+  @media screen and (max-width: 1700px) {
+    font-size: 15px;
+  }
 `;
 const ButtonIconWrap = styled.div`
   width: 25px;
