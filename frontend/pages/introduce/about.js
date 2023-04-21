@@ -1,5 +1,5 @@
-import IntroduceNav from '@/components/subpage/IntroduceNav';
 import styled from 'styled-components';
+import IntroduceNav from '@/components/subpage/IntroduceNav';
 
 const About = () => {
   return (
@@ -72,7 +72,7 @@ const About = () => {
   );
 };
 
-const Wrap = styled.div`
+export const Wrap = styled.div`
   position: relative;
   left: 18%;
   width: 82%;

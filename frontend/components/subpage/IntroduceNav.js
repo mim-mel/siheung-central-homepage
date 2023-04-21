@@ -1,12 +1,18 @@
 import styled from 'styled-components';
+import { useRouter } from 'next/router';
 
 const IntroduceNav = props => {
+  const router = useRouter();
+
   return (
     <SubMain>
       <SubMainImg src={props.url} />
       <SubTitle>{props.title}</SubTitle>
       <BoxWrap>
-        <Box className={props.categoryName === 'about' ? 'active' : null}>
+        <Box
+          className={props.categoryName === 'about' ? 'active' : null}
+          onClick={() => router.push('/introduce/about')}
+        >
           {props.categoryName === 'about' ? (
             <BoxIconWhite src='/image/sub1-icon1-w.png' />
           ) : (
@@ -16,20 +22,26 @@ const IntroduceNav = props => {
             병원소개
           </BoxText>
         </Box>
-        <Box className={props.categoryName === 'member' ? 'active' : null}>
-          {props.categoryName !== 'member' && <BoxLine />}
-          {props.categoryName === 'member' ? (
+        <Box
+          className={props.categoryName === 'members' ? 'active' : null}
+          onClick={() => router.push('/introduce/members/vet')}
+        >
+          {props.categoryName !== 'members' && <BoxLine />}
+          {props.categoryName === 'members' ? (
             <BoxIconWhite src='/image/sub1-icon2-w.png' />
           ) : (
             <BoxIcon src='/image/sub1-icon2.png' />
           )}
           <BoxText
-            className={props.categoryName === 'member' ? 'active' : null}
+            className={props.categoryName === 'members' ? 'active' : null}
           >
             의료진 소개
           </BoxText>
         </Box>
-        <Box className={props.categoryName === 'time' ? 'active' : null}>
+        <Box
+          className={props.categoryName === 'time' ? 'active' : null}
+          onClick={() => router.push('/introduce/time')}
+        >
           {props.categoryName !== 'time' && <BoxLine />}
           {props.categoryName === 'time' ? (
             <BoxIconWhite src='/image/sub1-icon3-w.png' />
@@ -40,7 +52,10 @@ const IntroduceNav = props => {
             진료시간 안내
           </BoxText>
         </Box>
-        <Box className={props.categoryName === 'hospital' ? 'active' : null}>
+        <Box
+          className={props.categoryName === 'hospital' ? 'active' : null}
+          onClick={() => router.push('/introduce/hospital')}
+        >
           {props.categoryName !== 'hospital' && <BoxLine />}
           {props.categoryName === 'hospital' ? (
             <BoxIconWhite src='/image/sub1-icon4-w.png' />
@@ -181,8 +196,8 @@ const Box = styled.div`
   &.active {
     width: 145px;
     height: 145px;
-    top: -10px;
-    left: -10px;
+    top: -12px;
+    left: -12px;
     background-color: #a48a79;
     z-index: 10;
   }

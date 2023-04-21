@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 const Nav = () => {
   const router = useRouter();
+
   const [IsMenu, setIsMenu] = useState(false);
   const [IsIntroduce, setIsIntroduce] = useState(false);
   const [IsClinic, setIsClinic] = useState(false);
