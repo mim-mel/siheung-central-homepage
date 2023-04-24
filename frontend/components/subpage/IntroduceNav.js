@@ -24,7 +24,7 @@ const IntroduceNav = props => {
         </Box>
         <Box
           className={props.categoryName === 'members' ? 'active' : null}
-          onClick={() => router.push('/introduce/members/vet')}
+          onClick={() => router.push('/introduce/members/vet/1')}
         >
           {props.categoryName !== 'members' && <BoxLine />}
           {props.categoryName === 'members' ? (

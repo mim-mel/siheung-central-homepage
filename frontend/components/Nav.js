@@ -155,7 +155,7 @@ const Nav = () => {
               <SubTitleBox onClick={() => router.push('/introduce/about')}>
                 <SubTitle>병원 소개</SubTitle>
               </SubTitleBox>
-              <SubTitleBox onClick={() => router.push('/introduce/member')}>
+              <SubTitleBox onClick={() => router.push('/introduce/members/vet/1')}>
                 <SubTitle>의료진 소개</SubTitle>
               </SubTitleBox>
               <SubTitleBox onClick={() => router.push('/introduce/time')}>
