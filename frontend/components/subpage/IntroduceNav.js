@@ -54,7 +54,7 @@ const IntroduceNav = props => {
         </Box>
         <Box
           className={props.categoryName === 'hospital' ? 'active' : null}
-          onClick={() => router.push('/introduce/hospital')}
+          onClick={() => router.push('/introduce/hospital/interior')}
         >
           {props.categoryName !== 'hospital' && <BoxLine />}
           {props.categoryName === 'hospital' ? (
@@ -131,7 +131,7 @@ const BoxWrap = styled.div`
   top: 82.5%;
   transform: translate(-50%, 0);
   background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px;
   border-radius: 15px;
 
   @media screen and (max-width: 1700px) {
@@ -178,7 +178,7 @@ const BoxText = styled.div`
     opacity: 1;
     color: white;
     font-weight: 500;
-    font-size: 17px;
+    font-size: 16px;
   }
 `;
 

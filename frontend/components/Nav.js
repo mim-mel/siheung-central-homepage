@@ -163,7 +163,7 @@ const Nav = () => {
               </SubTitleBox>
               <SubTitleBox
                 borderBottom
-                onClick={() => router.push('/introduce/hospital')}
+                onClick={() => router.push('/introduce/hospital/interior')}
               >
                 <SubTitle>병원 미리보기</SubTitle>
               </SubTitleBox>

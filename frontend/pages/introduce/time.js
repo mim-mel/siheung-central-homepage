@@ -47,7 +47,7 @@ const Time = () => {
           <ContentsTextWrap>
             <ContentsTextBlock>
               <ContentsTextBlock2>
-                <ContentsIcon src='/image/member-time-icon1.png'/>
+                <ContentsIcon src='/image/member-time-icon1.png' />
                 <ContentsText top withSubText>
                   00:00-09:00 ( 응급진료비 별도 청구 )
                   <SubText>( 토,일 밤 외래응급진료 휴진 )</SubText>
@@ -61,7 +61,7 @@ const Time = () => {
           <ContentsTextWrap>
             <ContentsTextBlock>
               <ContentsTextBlock2>
-                <ContentsIcon src='/image/member-time-icon2.png'/>
+                <ContentsIcon src='/image/member-time-icon2.png' />
                 <ContentsText top>
                   365일 24시간 간호 중점관리시스템
                 </ContentsText>
@@ -74,26 +74,26 @@ const Time = () => {
           <ContentsTextWrap>
             <ContentsTextBlock>
               <ContentsTextBlock2>
-                <ContentsIcon src='/image/member-time-icon3.png'/>
+                <ContentsIcon src='/image/time-icon3.png' />
                 <ContentsText top>
-                진료는 예약없이도 가능하나, 대기시간이 길어질 수 있음을 양해 바랍니다.
+                  진료는 예약없이도 가능하나, 대기시간이 길어질 수 있음을 양해
+                  바랍니다.
                 </ContentsText>
               </ContentsTextBlock2>
 
               <ContentsTextBlock2>
-                <ContentsIcon src='/image/member-time-icon3.png'/>
+                <ContentsIcon src='/image/time-icon3.png' />
                 <ContentsText top>
-                예약을 하더라도 응급처치 환자를 우선으로 함을 양해 바랍니다.
+                  예약을 하더라도 응급처치 환자를 우선으로 함을 양해 바랍니다.
                 </ContentsText>
               </ContentsTextBlock2>
 
               <ContentsTextBlock2>
-                <ContentsIcon src='/image/member-time-icon3.png'/>
+                <ContentsIcon src='/image/time-icon3.png' />
                 <ContentsText top>
-                응급진료/수술 - 예약진료 - 비예약진료 순
+                  응급진료/수술 - 예약진료 - 비예약진료 순
                 </ContentsText>
               </ContentsTextBlock2>
-
             </ContentsTextBlock>
           </ContentsTextWrap>
         </ContentsWrap>
@@ -102,9 +102,10 @@ const Time = () => {
           <ContentsTextWrap>
             <ContentsTextBlock>
               <ContentsTextBlock2>
-                <ContentsIcon src='/image/member-time-icon4.png'/>
+                <ContentsIcon src='/image/time-icon4.png' />
                 <ContentsText top>
-                심야응급 시간에는 미리 전화 후 내원하시면 조금 더 빠른 대처가 가능할 수 있습니다.
+                  심야응급 시간에는 미리 전화 후 내원하시면 조금 더 빠른 대처가
+                  가능할 수 있습니다.
                 </ContentsText>
               </ContentsTextBlock2>
             </ContentsTextBlock>
@@ -124,7 +125,7 @@ const TimeWrap = styled.div`
   box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px;
 
   @media screen and (max-width: 1024px) {
-    width:85%;
+    width: 85%;
   }
 
   @media screen and (max-width: 700px) {
@@ -224,16 +225,16 @@ const ContentsTextWrap = styled.div`
 `;
 
 const ContentsIcon = styled.img`
-    margin-right: 15px;
-    margin-left: 5px;
-    margin-top: 7px;
+  margin-right: 15px;
+  margin-left: 5px;
+  margin-top: 7px;
 
-    @media screen and (max-width: 700px) {
-      margin-left: 0;
-      margin-top: 2px;
-      margin-right: 8px;
+  @media screen and (max-width: 700px) {
+    margin-left: 0;
+    margin-top: 2px;
+    margin-right: 8px;
   }
-`
+`;
 
 const ContentsButton = styled.div`
   padding: 7px 12px;
@@ -289,7 +290,7 @@ const ContentsText = styled.div`
   font-size: 19px;
   letter-spacing: 0.3px;
   color: #666666;
-  margin-bottom: ${props=>props.withSubText ? '40px' : '10px'};
+  margin-bottom: ${props => (props.withSubText ? '40px' : '10px')};
   position: relative;
   top: ${props => (props.top ? '5px' : '0')};
   line-height: 29px;
@@ -323,6 +324,6 @@ const SubText = styled.div`
   @media screen and (max-width: 700px) {
     font-size: 13px;
   }
-`
+`;
 
 export default Time;
