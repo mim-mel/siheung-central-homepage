@@ -131,6 +131,11 @@ const Nav = () => {
     }
   };
 
+  const goToLink = link => {
+    router.push(link);
+    setIsMenu(false);
+  };
+
   return (
     <NavWrap>
       <WebLogo src='/image/logo.png' onClick={() => router.push('/')} />
@@ -152,18 +157,18 @@ const Nav = () => {
           <Triangle />
           <HoverWrap isToggleOn={IsIntroduce}>
             <SubTitleBoxWrap top='14.7vh'>
-              <SubTitleBox onClick={() => router.push('/introduce/about')}>
+              <SubTitleBox onClick={() => goToLink('/introduce/about')}>
                 <SubTitle>병원 소개</SubTitle>
               </SubTitleBox>
-              <SubTitleBox onClick={() => router.push('/introduce/members/vet/1')}>
+              <SubTitleBox onClick={() => goToLink('/introduce/members/vet/1')}>
                 <SubTitle>의료진 소개</SubTitle>
               </SubTitleBox>
-              <SubTitleBox onClick={() => router.push('/introduce/time')}>
+              <SubTitleBox onClick={() => goToLink('/introduce/time')}>
                 <SubTitle>진료시간 안내</SubTitle>
               </SubTitleBox>
               <SubTitleBox
                 borderBottom
-                onClick={() => router.push('/introduce/hospital/interior')}
+                onClick={() => goToLink('/introduce/hospital/interior')}
               >
                 <SubTitle>병원 미리보기</SubTitle>
               </SubTitleBox>
@@ -178,26 +183,24 @@ const Nav = () => {
           <Triangle />
           <HoverWrap isToggleOn={IsClinic}>
             <SubTitleBoxWrap top='19.7vh'>
-              <SubTitleBox onClick={() => router.push('/clinic/old')}>
+              <SubTitleBox onClick={() => goToLink('/clinic/old')}>
                 <SubTitle>노령 질환 센터</SubTitle>
               </SubTitleBox>
-              <SubTitleBox onClick={() => router.push('/clinic/surgery')}>
+              <SubTitleBox onClick={() => goToLink('/clinic/surgery')}>
                 <SubTitle>동물 수술 센터</SubTitle>
               </SubTitleBox>
-              <SubTitleBox onClick={() => router.push('/clinic/medicine')}>
+              <SubTitleBox onClick={() => goToLink('/clinic/medicine')}>
                 <SubTitle>내과 클리닉 센터</SubTitle>
               </SubTitleBox>
-              <SubTitleBox
-                onClick={() => router.push('/clinic/rehabilitation')}
-              >
+              <SubTitleBox onClick={() => goToLink('/clinic/rehabilitation')}>
                 <SubTitle>재활 통증의학 센터</SubTitle>
               </SubTitleBox>
-              <SubTitleBox onClick={() => router.push('/clinic/vaccination')}>
+              <SubTitleBox onClick={() => goToLink('/clinic/vaccination')}>
                 <SubTitle>예방의학 클리닉</SubTitle>
               </SubTitleBox>
               <SubTitleBox
                 borderBottom
-                onClick={() => router.push('/clinic/emergency')}
+                onClick={() => goToLink('/clinic/emergency')}
               >
                 <SubTitle>24시 응급실</SubTitle>
               </SubTitleBox>
@@ -212,18 +215,18 @@ const Nav = () => {
           <Triangle />
           <HoverWrap isToggleOn={IsCheckUp}>
             <SubTitleBoxWrap top='24.7vh'>
-              <SubTitleBox onClick={() => router.push('/checkup/introduce')}>
+              <SubTitleBox onClick={() => goToLink('/checkup/introduce')}>
                 <SubTitle>건강검진이란?</SubTitle>
               </SubTitleBox>
-              <SubTitleBox onClick={() => router.push('/checkup/dog')}>
+              <SubTitleBox onClick={() => goToLink('/checkup/dog')}>
                 <SubTitle>반려견 건강검진</SubTitle>
               </SubTitleBox>
-              <SubTitleBox onClick={() => router.push('/checkup/cat')}>
+              <SubTitleBox onClick={() => goToLink('/checkup/cat')}>
                 <SubTitle>반려묘 건강검진</SubTitle>
               </SubTitleBox>
               <SubTitleBox
                 borderBottom
-                onClick={() => router.push('/checkup/caution')}
+                onClick={() => goToLink('/checkup/caution')}
               >
                 <SubTitle>건강검진 전 후 안내 주의사항</SubTitle>
               </SubTitleBox>

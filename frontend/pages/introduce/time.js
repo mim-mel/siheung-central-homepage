@@ -47,7 +47,7 @@ const Time = () => {
           <ContentsTextWrap>
             <ContentsTextBlock>
               <ContentsTextBlock2>
-                <ContentsIcon src='/image/member-time-icon1.png' />
+                <ContentsIcon src='/image/time-icon1.png' />
                 <ContentsText top withSubText>
                   00:00-09:00 ( 응급진료비 별도 청구 )
                   <SubText>( 토,일 밤 외래응급진료 휴진 )</SubText>
@@ -61,7 +61,7 @@ const Time = () => {
           <ContentsTextWrap>
             <ContentsTextBlock>
               <ContentsTextBlock2>
-                <ContentsIcon src='/image/member-time-icon2.png' />
+                <ContentsIcon src='/image/time-icon2.png' />
                 <ContentsText top>
                   365일 24시간 간호 중점관리시스템
                 </ContentsText>

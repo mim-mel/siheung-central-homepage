@@ -48,9 +48,9 @@ const HospitalNavWrap = styled.div`
   }
 
   @media screen and (max-width: 700px) {
-    width: 80%;
-    margin: 1vh 0 5vh 0;
-    height: 45px;
+    width: 270px;
+    margin: 1vh 0 4vh 0;
+    height: 40px;
   }
 `;
 

@@ -138,10 +138,11 @@ const BoxWrap = styled.div`
   }
 
   @media screen and (max-width: 1024px) {
+    transform: translate(-50%, 0) scale(0.9);
   }
 
   @media screen and (max-width: 700px) {
-    transform: translate(-50%, 0) scale(0.65);
+    transform: translate(-50%, 0) scale(0.5);
     top: 65%;
   }
 `;
@@ -194,10 +195,10 @@ const Box = styled.div`
   position: relative;
   cursor: pointer;
   &.active {
-    width: 145px;
-    height: 145px;
-    top: -12px;
-    left: -12px;
+    width: 146px;
+    height: 146px;
+    top: -11px;
+    left: -11px;
     background-color: #a48a79;
     z-index: 10;
   }
