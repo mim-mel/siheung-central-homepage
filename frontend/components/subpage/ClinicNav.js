@@ -51,7 +51,7 @@ const ClinicNav = props => {
           <BoxText
             className={props.categoryName === 'medicine' ? 'active' : null}
           >
-            내부 클리닉 센터
+            내과 클리닉 센터
           </BoxText>
         </Box>
         <Box

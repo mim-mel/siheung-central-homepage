@@ -6,7 +6,7 @@ const Old = () => {
   return (
     <Wrap>
       <ClinicNav
-        url='/image/sub-main1.jpg'
+        url='/image/sub-main2.jpg'
         title='노령 질환 센터'
         categoryName='old'
       />
@@ -75,7 +75,7 @@ const Old = () => {
   );
 };
 
-const OldWrap = styled.div`
+export const OldWrap = styled.div`
   width: 1050px;
   margin: 0 auto 5vh auto;
 
@@ -84,22 +84,23 @@ const OldWrap = styled.div`
   }
 
   @media screen and (max-width: 1024px) {
-    width: 85%;
+    width: 670px;
     margin: 0 auto 3vh auto;
   }
 
   @media screen and (max-width: 700px) {
+    width: 320px;
   }
 `;
 
-const MainContentsWrap = styled.div`
+export const MainContentsWrap = styled.div`
   width: 1050px;
   height: auto;
   display: grid;
-  grid-template-columns: 45% 45%;
+  grid-template-columns: 45% 43%;
   margin-top: 15vh;
   justify-content: space-between;
-  margin-bottom: 13vh;
+  margin-bottom: 11vh;
 
   @media screen and (max-width: 1700px) {
     width: 950px;
@@ -107,16 +108,17 @@ const MainContentsWrap = styled.div`
 
   @media screen and (max-width: 1024px) {
     width: 100%;
+    grid-template-columns: 44% 44%;
   }
 
   @media screen and (max-width: 700px) {
     grid-template-columns: 100%;
     margin-top: 3vh;
-    margin-bottom: 7vh;
+    margin-bottom: 10vh;
   }
 `;
 
-const MainImg = styled.img`
+export const MainImg = styled.img`
   border-radius: 20px;
   transform: scale();
   @media screen and (max-width: 1700px) {
@@ -124,23 +126,23 @@ const MainImg = styled.img`
   }
 
   @media screen and (max-width: 1024px) {
-    width: 350px;
+    width: 340px;
   }
 
   @media screen and (max-width: 700px) {
-    width: 300px;
+    width: 310px;
     margin: 0 auto 30px auto;
   }
 `;
 
-const MainTextWrap = styled.div`
+export const MainTextWrap = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 `;
 
-const MainTitle = styled.div`
+export const MainTitle = styled.div`
   font-size: 38px;
   font-weight: 700;
   color: #623d30;
@@ -151,7 +153,7 @@ const MainTitle = styled.div`
   }
 
   @media screen and (max-width: 1024px) {
-    font-size: 29px;
+    font-size: 27px;
     margin-bottom: 20px;
   }
 
@@ -162,26 +164,30 @@ const MainTitle = styled.div`
   }
 `;
 
-const MainText = styled.div`
+export const MainText = styled.div`
   font-size: 17px;
   font-weight: 400;
   line-height: 29px;
   letter-spacing: -0.1px;
+  margin-bottom: ${props => (props.marginBottom ? '30px' : '')};
 
   @media screen and (max-width: 1700px) {
     font-size: 16px;
   }
 
   @media screen and (max-width: 1024px) {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 26px;
+    margin-bottom: ${props => (props.marginBottom ? '20px' : '')};
   }
 
   @media screen and (max-width: 700px) {
     width: 90%;
     margin: 0 auto;
+    margin-bottom: ${props => (props.marginBottom ? '15px' : '')};
     font-size: 13px;
     line-height: 24px;
+    letter-spacing: -0.3px;
   }
 `;
 
@@ -199,6 +205,7 @@ const SubContentsWrap = styled.div`
 
   @media screen and (max-width: 1024px) {
     width: 90%;
+    grid-template-columns: 40% 55%;
   }
 
   @media screen and (max-width: 700px) {
@@ -214,12 +221,12 @@ const SubImg = styled.img`
   }
 
   @media screen and (max-width: 1024px) {
-    width: 250px;
+    width: 230px;
   }
 
   @media screen and (max-width: 700px) {
     margin: 0 auto;
-    width: 230px;
+    width: 270px;
   }
 `;
 
@@ -241,11 +248,11 @@ const SubTitle = styled.div`
   }
 
   @media screen and (max-width: 1024px) {
-    font-size: 28px;
+    font-size: 27px;
   }
 
   @media screen and (max-width: 700px) {
-    font-size: 24px;
+    font-size: 26px;
     margin-top: 20px;
     text-align: center;
     margin-bottom: 15px;
@@ -263,15 +270,16 @@ const SubText = styled.div`
   }
 
   @media screen and (max-width: 1024px) {
-    font-size: 12.5px;
-    line-height: 23px;
+    font-size: 12px;
+    line-height: 22px;
   }
 
   @media screen and (max-width: 700px) {
     width: 90%;
     margin: 0 auto;
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 11px;
+    line-height: 18px;
+    text-align: center;
   }
 `;
 

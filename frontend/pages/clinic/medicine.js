@@ -181,7 +181,7 @@ const MedicineWrap = styled.div`
   margin-bottom: 10vh;
 
   @media screen and (max-width: 1024px) {
-    width: 700px;
+    width: 670px;
     margin-top: 10vh;
     margin-bottom: 6vh;
   }
@@ -206,7 +206,7 @@ const Contents1Wrap = styled.div`
   margin-bottom: 5vh;
 
   @media screen and (max-width: 1024px) {
-    width: 700px;
+    width: 670px;
     margin-bottom: 3.5vh;
   }
 
@@ -241,7 +241,7 @@ const Contents2Wrap = styled.div`
   box-sizing: border-box;
 
   @media screen and (max-width: 1024px) {
-    width: 700px;
+    width: 670px;
   }
 
   @media screen and (max-width: 700px) {
@@ -361,7 +361,7 @@ const IconBox1 = styled.div`
   align-items: center;
 
   @media screen and (max-width: 1024px) {
-    width: 145px;
+    width: 135px;
     height: 135px;
   }
 
@@ -426,7 +426,7 @@ const Contents3Wrap = styled.div`
   grid-gap: 15px;
 
   @media screen and (max-width: 1024px) {
-    width: 700px;
+    width: 670px;
   }
 
   @media screen and (max-width: 700px) {
@@ -447,8 +447,8 @@ const Contents3Box = styled.div`
   align-items: center;
 
   @media screen and (max-width: 1024px) {
-    width: 126px;
-    height: 150px;
+    width: 122px;
+    height: 140px;
   }
 
   @media screen and (max-width: 700px) {
@@ -466,8 +466,8 @@ const WhiteBox = styled.div`
   align-items: center;
 
   @media screen and (max-width: 1024px) {
-    width: 100px;
-    height: 95px;
+    width: 97px;
+    height: 91px;
     margin-bottom: 10px;
   }
 

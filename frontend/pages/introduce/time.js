@@ -125,7 +125,7 @@ const TimeWrap = styled.div`
   box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px;
 
   @media screen and (max-width: 1024px) {
-    width: 85%;
+    width: 650px;
   }
 
   @media screen and (max-width: 700px) {

@@ -274,7 +274,7 @@ const MachineWrap = styled.div`
   }
 
   @media screen and (max-width: 1024px) {
-    width: 700px;
+    width: 690px;
     grid-template-columns: auto auto auto auto;
   }
 
