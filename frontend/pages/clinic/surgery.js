@@ -257,7 +257,7 @@ const SurgeryWrap = styled.div`
   width: 1092px;
   height: auto;
   margin: 0 auto;
-  margin-top: 17vh;
+  margin-top: 15vh;
 
   @media screen and (max-width: 1700px) {
     width: 940px;

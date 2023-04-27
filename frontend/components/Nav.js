@@ -417,7 +417,7 @@ const HoverWrap = styled.div`
     width: 100%;
     opacity: 1;
     height: ${props => (props.isToggleOn ? 'auto' : '0px')};
-    background-color: #e0e0e0;
+    background-color: #ebebeb;
     position: relative;
     overflow: hidden;
     left: 0;
@@ -436,6 +436,10 @@ const SubTitle = styled.div`
     opacity: 1;
     font-size: 20px;
     font-weight: 600;
+  }
+
+  @media screen and (max-width: 700px) {
+    font-size: 18px;
   }
 `;
 
