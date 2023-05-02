@@ -430,6 +430,7 @@ const VacWrap = styled.div`
 
   @media screen and (max-width: 1024px) {
     width: 670px;
+    margin-top: 11vh;
   }
 
   @media screen and (max-width: 700px) {
