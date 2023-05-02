@@ -431,6 +431,7 @@ const VacWrap = styled.div`
   @media screen and (max-width: 1024px) {
     width: 670px;
     margin-top: 11vh;
+    margin-bottom: 5vh;
   }
 
   @media screen and (max-width: 700px) {
@@ -463,6 +464,11 @@ const Contents1Wrap = styled.div`
   box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px 0px;
   box-sizing: border-box;
   margin-bottom: 100px;
+
+  @media screen and (max-width: 1024px) {
+    padding: 30px 50px;
+    margin-bottom: 80px;
+  }
 
   @media screen and (max-width: 700px) {
     padding: 25px 30px;

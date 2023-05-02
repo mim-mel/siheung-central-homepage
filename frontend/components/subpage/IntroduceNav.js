@@ -73,7 +73,7 @@ const IntroduceNav = props => {
   );
 };
 
-const SubMain = styled.div`
+export const SubMain = styled.div`
   height: 349px;
   width: 100%;
   display: flex;
@@ -91,7 +91,7 @@ const SubMain = styled.div`
   }
 `;
 
-const SubMainImg = styled.img`
+export const SubMainImg = styled.img`
   width: 100%;
   height: 349px;
   position: absolute;
@@ -109,7 +109,7 @@ const SubMainImg = styled.img`
   }
 `;
 
-const SubTitle = styled.div`
+export const SubTitle = styled.div`
   font-size: 40px;
   font-weight: 600;
   color: white;
@@ -121,7 +121,7 @@ const SubTitle = styled.div`
   }
 `;
 
-const BoxWrap = styled.div`
+export const BoxWrap = styled.div`
   display: grid;
   width: 496px;
   height: 124px;
@@ -147,7 +147,7 @@ const BoxWrap = styled.div`
   }
 `;
 
-const BoxLine = styled.div`
+export const BoxLine = styled.div`
   width: 0.1px;
   height: 62px;
   background-color: black;
@@ -158,32 +158,40 @@ const BoxLine = styled.div`
   transform: translate(0, -50%);
 `;
 
-const BoxIcon = styled.img`
+export const BoxIcon = styled.img`
   opacity: 0.3;
   margin-bottom: 10px;
   transition: 0.2s;
+  top: ${props => (props.long ? '4px' : '')};
+  position: relative;
 `;
 
-const BoxIconWhite = styled.img`
+export const BoxIconWhite = styled.img`
   margin-bottom: 10px;
+  top: ${props => (props.long ? '4px' : '')};
+  position: relative;
 `;
 
-const BoxText = styled.div`
-  font-size: 15px;
+export const BoxText = styled.div`
+  font-size: ${props => (props.long ? '14px' : '15px')};
   font-weight: 700;
   color: black;
   opacity: 0.3;
   transition: 0.2s;
+  text-align: center;
+  line-height: ${props => (props.long ? '17px' : '')};
+  position: relative;
+  top: ${props => (props.long ? '3px' : '')};
 
   &.active {
     opacity: 1;
     color: white;
     font-weight: 500;
-    font-size: 16px;
+    font-size: ${props => (props.long ? '15px' : '16px')};
   }
 `;
 
-const Box = styled.div`
+export const Box = styled.div`
   width: 124px;
   height: 124px;
   background-color: white;

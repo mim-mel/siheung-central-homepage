@@ -107,21 +107,21 @@ const Emergency = () => {
 
 const EmergencyWrap = styled.div`
   width: 1000px;
-  margin: 8vh auto 10vh auto;
+  margin: 15vh auto 10vh auto;
 
   @media screen and (max-width: 1700px) {
     width: 940px;
-    margin: 6vh auto 10vh auto;
+    margin: 15vh auto 10vh auto;
   }
 
   @media screen and (max-width: 1024px) {
     width: 670px;
-    margin: 6vh auto 8vh auto;
+    margin: 11vh auto 8vh auto;
   }
 
   @media screen and (max-width: 700px) {
     width: 320px;
-    margin: 0 auto 8vh auto;
+    margin: 2vh auto 8vh auto;
   }
 `;
 
@@ -130,7 +130,6 @@ const Title = styled.div`
   font-weight: 700;
   color: #623d30;
   margin-bottom: 40px;
-  margin-top: 60px;
 
   @media screen and (max-width: 1024px) {
     font-size: 33px;
@@ -141,7 +140,6 @@ const Title = styled.div`
     font-size: 23px;
     margin-bottom: 20px;
     text-align: center;
-    margin-top: 0;
   }
 `;
 
