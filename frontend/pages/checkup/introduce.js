@@ -33,9 +33,9 @@ const Introduce = () => {
   );
 };
 
-const IntroduceWrap = styled.div`
+export const IntroduceWrap = styled.div`
   margin: 17vh auto 11vh auto;
-  width: 1050px;
+  width: 1000px;
 
   @media screen and (max-width: 1700px) {
     width: 940px;
@@ -52,7 +52,7 @@ const IntroduceWrap = styled.div`
   }
 `;
 
-const Title = styled.div`
+export const Title = styled.div`
   font-size: 35px;
   font-weight: 700;
   color: #623d30;
@@ -71,12 +71,16 @@ const Title = styled.div`
   }
 `;
 
-const TextBox = styled.div`
+export const TextBox = styled.div`
   width: 100%;
-  padding: 40px 50px;
+  padding: ${props => (props.padding ? '70px 90px' : '40px 50px')};
   box-sizing: border-box;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px;
+
+  @media screen and (max-width: 1024px) {
+    padding: ${props => (props.padding ? '50px 70px' : '40px 50px')};
+  }
 
   @media screen and (max-width: 700px) {
     padding: 30px 30px;
