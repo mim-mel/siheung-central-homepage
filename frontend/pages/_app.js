@@ -1,10 +1,26 @@
 import Layout from '@/components/Layout';
 import '@/styles/globals.css';
+import Script from 'next/script';
+import Head from 'next/head';
 
 export default function App({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <>
+      <Head>
+        <title>시흥 24시 센트럴 동물병원</title>
+        <meta charSet='utf-8' />
+        <link
+          href='https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css'
+          rel='stylesheet'
+        />
+      </Head>
+      <Script
+        strategy='beforeInteractive'
+        src={`https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${process.env.NEXT_PUBLIC_MAP_KEY}`}
+      ></Script>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </>
   );
 }
