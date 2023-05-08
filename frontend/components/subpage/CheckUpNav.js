@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { useRouter } from 'next/router';
 import {
   SubMain,
+  SubMainImgWrap,
   SubMainImg,
   SubTitle,
   BoxWrap,
@@ -17,7 +18,9 @@ const CheckUpNav = props => {
 
   return (
     <SubMain>
-      <SubMainImg src={props.url} />
+      <SubMainImgWrap>
+        <SubMainImg src={props.url} />
+      </SubMainImgWrap>
       <SubTitle>{props.title}</SubTitle>
       <BoxWrap>
         <Box

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import {
   SubMain,
+  SubMainImgWrap,
   SubMainImg,
   SubTitle,
 } from '@/components/subpage/IntroduceNav';
@@ -53,7 +54,9 @@ const Map = () => {
   return (
     <Wrap>
       <SubMain>
-        <SubMainImg src='/image/sub-main4.jpg' />
+        <SubMainImgWrap>
+          <SubMainImg src='/image/sub-main4.jpg' />
+        </SubMainImgWrap>
         <SubTitle>오시는 길</SubTitle>
       </SubMain>
       <MapWrap>
@@ -102,7 +105,7 @@ const MapWrap = styled.div`
 
   @media screen and (max-width: 700px) {
     width: 320px;
-    margin: 0 auto 6vh auto;
+    margin: 60px auto 60px auto;
   }
 `;
 
@@ -190,13 +193,15 @@ const TextWrap = styled.div`
   }
 
   @media screen and (max-width: 700px) {
+    margin: 0 auto;
     margin-top: ${props => (props.marginTop ? '30px' : '')};
     margin-bottom: ${props => (props.marginBottom ? '60px' : '20px')};
-    font-size: 17px;
+    font-size: 16px;
     line-height: 27px;
     display: flex;
     justify-content: center;
     text-align: center;
+    width: 90%;
   }
 `;
 

@@ -119,7 +119,7 @@ const ContentsWrap = styled.div`
   }
 
   @media screen and (max-width: 700px) {
-    margin-top: 40px;
+    margin-top: 80px;
     margin-bottom: 30px;
   }
 `;

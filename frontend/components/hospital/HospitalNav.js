@@ -49,7 +49,7 @@ const HospitalNavWrap = styled.div`
 
   @media screen and (max-width: 700px) {
     width: 270px;
-    margin: 1vh 0 4vh 0;
+    margin: 80px 0 30px 0;
     height: 40px;
   }
 `;

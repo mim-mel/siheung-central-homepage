@@ -9,10 +9,6 @@ export default function App({ Component, pageProps }) {
       <Head>
         <title>시흥 24시 센트럴 동물병원</title>
         <meta charSet='utf-8' />
-        <link
-          href='https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css'
-          rel='stylesheet'
-        />
       </Head>
       <Script
         strategy='beforeInteractive'

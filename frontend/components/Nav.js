@@ -241,7 +241,7 @@ const Nav = () => {
           <Triangle />
           <HoverWrap isToggleOn={IsMap}>
             <SubTitleBoxWrap top='29.7vh'>
-              <SubTitleBox borderBottom onClick={() => router.push('/map')}>
+              <SubTitleBox borderBottom onClick={() => goToLink('/map')}>
                 <SubTitle>찾아오시는 길</SubTitle>
               </SubTitleBox>
             </SubTitleBoxWrap>
@@ -255,12 +255,12 @@ const Nav = () => {
           <Triangle />
           <HoverWrap isToggleOn={IsNews}>
             <SubTitleBoxWrap top='34.7vh'>
-              <SubTitleBox onClick={() => router.push('/news/inform')}>
+              <SubTitleBox onClick={() => goToLink('/news/notice')}>
                 <SubTitle>공지사항</SubTitle>
               </SubTitleBox>
               <SubTitleBox
                 borderBottom
-                onClick={() => router.push('/news/notice')}
+                onClick={() => goToLink('/news/inform')}
               >
                 <SubTitle>센트럴 소식</SubTitle>
               </SubTitleBox>

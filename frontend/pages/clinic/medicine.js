@@ -188,7 +188,7 @@ const MedicineWrap = styled.div`
 
   @media screen and (max-width: 700px) {
     width: 320px;
-    margin-top: 1vh;
+    margin-top: 7vh;
     margin-bottom: 4vh;
   }
 `;

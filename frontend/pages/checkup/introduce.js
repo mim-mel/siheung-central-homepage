@@ -48,7 +48,7 @@ export const IntroduceWrap = styled.div`
 
   @media screen and (max-width: 700px) {
     width: 320px;
-    margin: 2vh auto 8vh auto;
+    margin: 80px auto 80px auto;
   }
 `;
 

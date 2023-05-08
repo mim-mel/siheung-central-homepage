@@ -58,6 +58,7 @@ const MemberNavWrap = styled.div`
   @media screen and (max-width: 700px) {
     width: 80%;
     margin: 1vh 0 5vh 0;
+    margin-top: 80px;
     height: 40px;
   }
 `;

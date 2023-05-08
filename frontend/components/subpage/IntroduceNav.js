@@ -6,7 +6,9 @@ const IntroduceNav = props => {
 
   return (
     <SubMain>
-      <SubMainImg src={props.url} />
+      <SubMainImgWrap>
+        <SubMainImg src={props.url} />
+      </SubMainImgWrap>
       <SubTitle>{props.title}</SubTitle>
       <BoxWrap>
         <Box
@@ -88,15 +90,18 @@ export const SubMain = styled.div`
   }
 
   @media screen and (max-width: 700px) {
+    height: 290px;
   }
 `;
 
-export const SubMainImg = styled.img`
+export const SubMainImgWrap = styled.div`
   width: 100%;
+  overflow: hidden;
+`;
+
+export const SubMainImg = styled.img`
   height: 349px;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
 
   @media screen and (max-width: 1700px) {
   }
@@ -106,6 +111,7 @@ export const SubMainImg = styled.img`
 
   @media screen and (max-width: 700px) {
     height: 290px;
+    left: -400px;
   }
 `;
 
@@ -115,17 +121,23 @@ export const SubTitle = styled.div`
   color: white;
   z-index: 10;
   letter-spacing: 2px;
+  margin: 0 auto;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   @media screen and (max-width: 700px) {
-    font-size: 30px;
+    font-size: 25px;
   }
 `;
 
 export const BoxWrap = styled.div`
   display: grid;
-  width: 496px;
+  width: ${props => (props.small ? '248px' : '496px')};
   height: 124px;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: ${props =>
+    props.small ? '50% 50%' : '25% 25% 25% 25%'};
   position: absolute;
   left: 50%;
   top: 82.5%;
@@ -143,7 +155,7 @@ export const BoxWrap = styled.div`
 
   @media screen and (max-width: 700px) {
     transform: translate(-50%, 0) scale(0.5);
-    top: 65%;
+    top: 79%;
   }
 `;
 
@@ -203,10 +215,10 @@ export const Box = styled.div`
   position: relative;
   cursor: pointer;
   &.active {
-    width: 146px;
-    height: 146px;
-    top: -11px;
-    left: -11px;
+    width: 140px;
+    height: 140px;
+    top: -9px;
+    left: -9px;
     background-color: #a48a79;
     z-index: 10;
   }

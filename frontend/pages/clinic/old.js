@@ -77,7 +77,7 @@ const Old = () => {
 
 export const OldWrap = styled.div`
   width: 1050px;
-  margin: 0 auto 5vh auto;
+  margin: 1vh auto 5vh auto;
 
   @media screen and (max-width: 1700px) {
     width: 950px;
@@ -85,7 +85,7 @@ export const OldWrap = styled.div`
 
   @media screen and (max-width: 1024px) {
     width: 670px;
-    margin: 0 auto 3vh auto;
+    margin: 5vh auto 3vh auto;
   }
 
   @media screen and (max-width: 700px) {

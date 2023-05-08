@@ -1,12 +1,25 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
+import {
+  SubMain,
+  SubMainImg,
+  SubMainImgWrap,
+  SubTitle,
+  Box,
+  BoxIconWhite,
+  BoxIcon,
+  BoxText,
+  BoxLine,
+} from './IntroduceNav';
 
 const ClinicNav = props => {
   const router = useRouter();
 
   return (
     <SubMain>
-      <SubMainImg src={props.url} />
+      <SubMainImgWrap>
+        <SubMainImg src={props.url} />
+      </SubMainImgWrap>
       <SubTitle>{props.title}</SubTitle>
       <BoxWrap>
         <Box
@@ -109,53 +122,31 @@ const ClinicNav = props => {
   );
 };
 
-const SubMain = styled.div`
-  height: 349px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+// export const BoxWrap = styled.div`
+//   display: grid;
+//   width: 744px;
+//   height: 124px;
+//   grid-template-columns: auto auto auto auto auto auto;
+//   position: absolute;
+//   left: 50%;
+//   top: 82.5%;
+//   transform: translate(-50%, 0);
+//   background-color: white;
+//   box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px;
+//   border-radius: 15px;
 
-  @media screen and (max-width: 1700px) {
-  }
+//   @media screen and (max-width: 1700px) {
+//   }
 
-  @media screen and (max-width: 1024px) {
-  }
+//   @media screen and (max-width: 1024px) {
+//     transform: translate(-50%, 0) scale(0.9);
+//   }
 
-  @media screen and (max-width: 700px) {
-  }
-`;
-
-const SubMainImg = styled.img`
-  width: 100%;
-  height: 349px;
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  @media screen and (max-width: 1700px) {
-  }
-
-  @media screen and (max-width: 1024px) {
-  }
-
-  @media screen and (max-width: 700px) {
-    height: 290px;
-  }
-`;
-
-const SubTitle = styled.div`
-  font-size: 40px;
-  font-weight: 600;
-  color: white;
-  z-index: 10;
-  letter-spacing: 2px;
-
-  @media screen and (max-width: 700px) {
-    font-size: 30px;
-  }
-`;
+//   @media screen and (max-width: 700px) {
+//     transform: translate(-50%, 0) scale(0.5);
+//     top: 79%;
+//   }
+// `;
 
 const BoxWrap = styled.div`
   display: grid;
@@ -180,77 +171,7 @@ const BoxWrap = styled.div`
 
   @media screen and (max-width: 700px) {
     transform: translate(-50%, 0) scale(0.45);
-    top: 65%;
-  }
-`;
-
-const BoxLine = styled.div`
-  width: 0.1px;
-  height: 62px;
-  background-color: black;
-  opacity: 0.2;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(0, -50%);
-`;
-
-const BoxIcon = styled.img`
-  opacity: 0.3;
-  margin-bottom: 10px;
-  transition: 0.2s;
-`;
-
-const BoxIconWhite = styled.img`
-  margin-bottom: 10px;
-`;
-
-const BoxText = styled.div`
-  font-size: 15px;
-  font-weight: 700;
-  color: black;
-  opacity: 0.3;
-  transition: 0.2s;
-  letter-spacing: -1px;
-
-  &.active {
-    opacity: 1;
-    color: white;
-    font-weight: 500;
-    font-size: 16px;
-  }
-`;
-
-const Box = styled.div`
-  width: 124px;
-  height: 124px;
-  background-color: white;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  cursor: pointer;
-  &.active {
-    width: 146px;
-    height: 146px;
-    top: -11px;
-    left: -11px;
-    background-color: #a48a79;
-    z-index: 10;
-  }
-
-  &:hover ${BoxText} {
-    opacity: 0.6;
-
-    &.active {
-      opacity: 1;
-    }
-  }
-
-  &:hover ${BoxIcon} {
-    opacity: 0.5;
+    top: 79%;
   }
 `;
 

@@ -129,7 +129,8 @@ const TimeWrap = styled.div`
   }
 
   @media screen and (max-width: 700px) {
-    margin: 4vh auto 8vh auto;
+    margin: 80px auto 80px auto;
+    width: 320px;
   }
 `;
 
@@ -215,7 +216,9 @@ const ContentsTitle = styled.div`
   }
 
   @media screen and (max-width: 700px) {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 19px;
+    font-weight: 700;
   }
 `;
 
