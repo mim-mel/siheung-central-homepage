@@ -85,11 +85,12 @@ export const OldWrap = styled.div`
 
   @media screen and (max-width: 1024px) {
     width: 670px;
-    margin: 5vh auto 3vh auto;
+    margin: 0 auto 3vh auto;
   }
 
   @media screen and (max-width: 700px) {
     width: 320px;
+    margin: 5vh auto 3vh auto;
   }
 `;
 
@@ -109,6 +110,8 @@ export const MainContentsWrap = styled.div`
   @media screen and (max-width: 1024px) {
     width: 100%;
     grid-template-columns: 44% 44%;
+    margin-top: 12vh;
+    margin-bottom: 8vh;
   }
 
   @media screen and (max-width: 700px) {

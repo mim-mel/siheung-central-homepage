@@ -16,18 +16,80 @@ const Tech = () => {
         <ImgBlock>
           <Img src='/image/member-tech1.jpg' />
           <NameBack>
-            <Name>총괄간호팀장 OOO</Name>
+            <Name>간호실장 전은혜</Name>
           </NameBack>
         </ImgBlock>
-        <ImgBlock></ImgBlock>
-        <ImgBlock></ImgBlock>
-        <ImgBlock></ImgBlock>
+        <ImgBlock>
+          <Img src='/image/member-tech2.jpg' />
+          <NameBack>
+            <Name>간호실장 이유리</Name>
+          </NameBack>
+        </ImgBlock>
+        <ImgBlock>
+          <Img src='/image/member-tech3.jpg' />
+          <NameBack>
+            <Name>총괄매니저 최유리</Name>
+          </NameBack>
+        </ImgBlock>
+        <ImgBlock>
+          <Img src='/image/member-tech4.jpg' />
+          <NameBack>
+            <Name>테크니션 최유리</Name>
+          </NameBack>
+        </ImgBlock>
       </TechWrap>
+      <TechWrap>
+        <ImgBlock>
+          <Img src='/image/member-tech5.jpg' />
+          <NameBack>
+            <Name>테크니션 이창신</Name>
+          </NameBack>
+        </ImgBlock>
+        <ImgBlock>
+          <Img src='/image/member-tech6.jpg' />
+          <NameBack>
+            <Name>테크니션 오유진</Name>
+          </NameBack>
+        </ImgBlock>
+        <ImgBlock>
+          <Img src='/image/member-tech7.jpg' />
+          <NameBack>
+            <Name>테크니션 송은빈</Name>
+          </NameBack>
+        </ImgBlock>
+        <ImgBlock>
+          <Img src='/image/member-tech8.jpg' />
+          <NameBack>
+            <Name>테크니션 김가은</Name>
+          </NameBack>
+        </ImgBlock>
+      </TechWrap>
+
       <TechWrap marginBottom>
-        <ImgBlock></ImgBlock>
-        <ImgBlock></ImgBlock>
-        <ImgBlock></ImgBlock>
-        <ImgBlock></ImgBlock>
+        <ImgBlock>
+          <Img src='/image/member-tech9.jpg' />
+          <NameBack>
+            <Name>테크니션 김지원</Name>
+          </NameBack>
+        </ImgBlock>
+        <ImgBlock>
+          <Img src='/image/member-tech10.jpg' />
+          <NameBack>
+            <Name>테크니션 임은수</Name>
+          </NameBack>
+        </ImgBlock>
+        <ImgBlock>
+          <Img src='/image/member-tech11.jpg' />
+          <NameBack>
+            <Name>테크니션 박가연</Name>
+          </NameBack>
+        </ImgBlock>
+        <ImgBlock>
+          <Img src='/image/member-tech12.jpg' />
+          <NameBack>
+            <Name>테크니션 김가람</Name>
+          </NameBack>
+        </ImgBlock>
       </TechWrap>
     </Wrap>
   );

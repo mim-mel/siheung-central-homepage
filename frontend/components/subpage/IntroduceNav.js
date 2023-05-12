@@ -123,12 +123,17 @@ export const SubTitle = styled.div`
   letter-spacing: 2px;
   margin: 0 auto;
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
+  @media screen and (max-width: 1024px) {
+    top: 55%;
+  }
+
   @media screen and (max-width: 700px) {
     font-size: 25px;
+    top: 60%;
   }
 `;
 

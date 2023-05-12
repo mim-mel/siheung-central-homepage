@@ -25,7 +25,7 @@ import {
   Contents2Name,
 } from './1';
 
-const Vet2 = () => {
+const Vet4 = () => {
   const [Toggle1State, setToggle1State] = useState(false);
   const [Toggle2State, setToggle2State] = useState(false);
 
@@ -54,11 +54,11 @@ const Vet2 = () => {
         categoryName='members'
       />
       <MemberNav categoryName='vet' />
-      <VetNav categoryName='vet2' />
-      <Name>김지안 원장</Name>
+      <VetNav categoryName='vet4' />
+      <Name>이민재 원장</Name>
       <ImgWrap>
         {/* 메인 이미지 변경 */}
-        <VetImg src='/image/member-vet2-big.jpg' />
+        <VetImg src='/image/member-vet4-big.jpg' />
       </ImgWrap>
       <Toggle>
         <ToggleTitle>
@@ -72,51 +72,53 @@ const Vet2 = () => {
         </ToggleTitle>
         <Contents1Wrap isToggleOn={Toggle1State}>
           {/* 이력에 들어가는 일러스트 변경 */}
-          <Content1Img src='/image/member-vet2-illust.jpg' />
+          <Content1Img src='/image/member-vet4-illust.jpg' />
           <ContentsTextWrap>
             {/* 이력서 타이틀 수정 */}
-            <ContentsTitle themeColor='#f5bbc0'>
-              학술 지원 연구 담당
+            <ContentsTitle themeColor='#a3bc92'>
+              마음이 따듯한 실력있는 수의사
             </ContentsTitle>
             <CheckTextWrap>
               {/* 체크 아이콘 색상 및 이력서 내용 수정 */}
-              <CheckIcon src='/image/member-vet2-checkicon.png' />
+              <CheckIcon src='/image/member-vet4-checkicon.png' />
               <ChechTextBox>
                 <CheckText marginBottomX>
-                  현 시흥 24시 센트럴 동물의료센터 원장
+                  현 시흥24시 센트럴 동물의료센터 원장
                 </CheckText>
               </ChechTextBox>
             </CheckTextWrap>
 
             <CheckTextWrap>
-              <CheckIcon src='/image/member-vet2-checkicon.png' />
+              <CheckIcon src='/image/member-vet4-checkicon.png' />
               <ChechTextBox>
                 <CheckText marginBottomX>
-                  시흥 24시 센트럴 동물의료센터 과장
+                  인천 24시 스카이동물의료센터 진료총괄 원장
                 </CheckText>
-                <CheckText>인천 동암동물병원 진료수의사</CheckText>
-                <CheckText>대전 충남대학교 동물병원 수의사</CheckText>
+                <CheckText>
+                  인천 24시 스카이동물의료센터 진료총괄 원장
+                </CheckText>
+                <CheckText>서울 24시 신사스카이동물병원 부원장</CheckText>
+                <CheckText>서울 강남 페츠비 동물의료센터 진료수의사</CheckText>
+                <CheckText>안양 씨엘 동물병원 원장</CheckText>
+                <CheckText>도그빌 동물병원 진료수의사</CheckText>
               </ChechTextBox>
             </CheckTextWrap>
 
             <CheckTextWrap>
-              <CheckIcon src='/image/member-vet2-checkicon.png' />
+              <CheckIcon src='/image/member-vet4-checkicon.png' />
               <ChechTextBox>
                 <CheckText marginBottomX>
-                  국립 충남대학교 수의과대학 졸업 (DVM)
+                  국립 서울대학교 수의과대학 졸업(DVM)
                 </CheckText>
-                <CheckText>국립 충남대학교 수의과대학 석사 졸업(MS)</CheckText>
                 <CheckText>대한수의사회 정회원(KVMA)</CheckText>
               </ChechTextBox>
             </CheckTextWrap>
 
             <CheckTextWrap>
-              <CheckIcon src='/image/member-vet2-checkicon.png' />
+              <CheckIcon src='/image/member-vet4-checkicon.png' />
               <ChechTextBox>
-                <CheckText marginBottomX>중앙 AMC 임상세미나 수료</CheckText>
-                <CheckText>
-                  임상 컨퍼런스, 수의학술대회 매년 학회 수료
-                </CheckText>
+                <CheckText marginBottomX>임상 세미나 다수 수료</CheckText>
+                <CheckText>임상 학회 다수 참석</CheckText>
               </ChechTextBox>
             </CheckTextWrap>
           </ContentsTextWrap>
@@ -135,20 +137,14 @@ const Vet2 = () => {
         </ToggleTitle>
         <Contents2Wrap isToggleOn={Toggle2State}>
           <Contents2Text>
-            어린시절부터 동물에 대한 관심이 많았습니다. 동물과 가족이 되는걸
-            가장 큰 선물이라고 생각할 정도 였습니다. 키우게 된 동물들이 많았고,
-            키웠던 강아지가 오래 살지 못하고 생을 마감했던 기억이 있습니다.
-            동물을 사랑했던 저에게 지켜주지못한 것이 큰 충격이었습니다. 그 이후
-            공부를 하고 수의사가 되었고 예전의 기억을 힘으로 삼아 조금더 보호자
-            마음을 살피게 되었습니다. 강아지가 건강하게 회복 하고 나갈 때 보람을
-            느낌니다. 대외적인 학술활동을 주로 있으며, 임상수의학의 발전을 위해
-            노력중입니다.
+            수의사이기 이전에 한명의 보호자로서 아이들과의 건강한 삶과 관계를
+            유지하는것을 조금 더 생각하는 진료를 추구하도록 하겠습니다.
           </Contents2Text>
-          <Contents2Name>by. 김지안 원장</Contents2Name>
+          <Contents2Name>by. 이민재 원장</Contents2Name>
         </Contents2Wrap>
       </Toggle>
     </Wrap>
   );
 };
 
-export default Vet2;
+export default Vet4;

@@ -13,7 +13,9 @@ const Footer = () => {
             <FooterTitle onClick={() => router.push('/introduce/about')}>
               병원 소개
             </FooterTitle>
-            <FooterTitle onClick={() => router.push('/introduce/member')}>
+            <FooterTitle
+              onClick={() => router.push('/introduce/members/vet/1')}
+            >
               의료진 소개
             </FooterTitle>
             <FooterTitle onClick={() => router.push('/introduce/time')}>

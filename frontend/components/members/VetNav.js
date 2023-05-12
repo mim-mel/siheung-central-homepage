@@ -16,14 +16,44 @@ const VetNav = props => {
         <VetBlockBorder
           className={props.categoryName === 'vet2' ? 'active' : null}
         />
-        <VetImg src='/image/member-vet1.jpg' />
+        <VetImg src='/image/member-vet2.jpg' />
       </VetBlock>
-      <VetBlock></VetBlock>
-      <VetBlock></VetBlock>
-      <VetBlock></VetBlock>
-      <VetBlock></VetBlock>
-      <VetBlock></VetBlock>
-      <VetBlock></VetBlock>
+      <VetBlock onClick={() => router.push('/introduce/members/vet/3')}>
+        <VetBlockBorder
+          className={props.categoryName === 'vet3' ? 'active' : null}
+        />
+        <VetImg src='/image/member-vet3.jpg' />
+      </VetBlock>
+      <VetBlock onClick={() => router.push('/introduce/members/vet/4')}>
+        <VetBlockBorder
+          className={props.categoryName === 'vet4' ? 'active' : null}
+        />
+        <VetImg src='/image/member-vet4.jpg' />
+      </VetBlock>
+      <VetBlock onClick={() => router.push('/introduce/members/vet/5')}>
+        <VetBlockBorder
+          className={props.categoryName === 'vet5' ? 'active' : null}
+        />
+        <VetImg src='/image/member-vet5.jpg' />
+      </VetBlock>
+      <VetBlock onClick={() => router.push('/introduce/members/vet/6')}>
+        <VetBlockBorder
+          className={props.categoryName === 'vet6' ? 'active' : null}
+        />
+        <VetImg src='/image/member-vet6.jpg' />
+      </VetBlock>
+      <VetBlock onClick={() => router.push('/introduce/members/vet/7')}>
+        <VetBlockBorder
+          className={props.categoryName === 'vet7' ? 'active' : null}
+        />
+        <VetImg src='/image/member-vet7.jpg' />
+      </VetBlock>
+      <VetBlock onClick={() => router.push('/introduce/members/vet/8')}>
+        <VetBlockBorder
+          className={props.categoryName === 'vet8' ? 'active' : null}
+        />
+        <VetImg src='/image/member-vet8.jpg' />
+      </VetBlock>
     </VetNavWrap>
   );
 };

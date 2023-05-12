@@ -52,7 +52,9 @@ const Vet1 = () => {
         <Contents1Wrap isToggleOn={Toggle1State}>
           <Content1Img src='/image/member-vet1-illust.jpg' />
           <ContentsTextWrap>
-            <ContentsTitle>최고의 실력과 신뢰</ContentsTitle>
+            <ContentsTitle themeColor='#8294c4'>
+              최고의 실력과 신뢰
+            </ContentsTitle>
             <CheckTextWrap>
               <CheckIcon src='/image/member-vet1-checkicon.png' />
               <ChechTextBox>
@@ -81,14 +83,24 @@ const Vet1 = () => {
                 <CheckText marginBottomX>
                   국립 충남대학교 수의학과 졸업(DVM)
                 </CheckText>
+                <CheckText>대한수의사회 정회원(KVMA)</CheckText>
+                <CheckText>대한수의외과학회 정회원(KVS)</CheckText>
+                <CheckText>한국고양이 수의사회 정회원(KSFM)</CheckText>
               </ChechTextBox>
             </CheckTextWrap>
 
             <CheckTextWrap>
               <CheckIcon src='/image/member-vet1-checkicon.png' />
               <ChechTextBox>
-                <CheckText marginBottomX>대한수의사회 정회원(KVMA)</CheckText>
-                <CheckText>한국고양이 수의사회 정회원(KSFM)</CheckText>
+                <CheckText marginBottomX>
+                  서울 중앙 AMC 임상세미나 수료
+                </CheckText>
+                <CheckText>외과(정형외과) 세미나 다수 수료</CheckText>
+                <CheckText>치과,안과 세미나 다수 수료</CheckText>
+                <CheckText>초음파 세미나수료 (심장초음파,복부정밀)</CheckText>
+                <CheckText>
+                  임상 컨퍼런스, 수의학술대회 매년 학회 수료
+                </CheckText>
               </ChechTextBox>
             </CheckTextWrap>
           </ContentsTextWrap>
@@ -107,18 +119,23 @@ const Vet1 = () => {
         </ToggleTitle>
         <Contents2Wrap isToggleOn={Toggle2State}>
           <Contents2Text>
-            Lorem Ipsum has been the standard dummy text ever since the 1500s,
-            when an unknown printer took a galley of type and scrambled it to
-            make a type specimen book. It has survived not only five centuries,
-            but also the leap into electronic typesetting
+            저 또한 반려동물의 보호자로서 동물에 대한 애정을 가지고 있습니다.
+            노령이된 강아지를 이별한 경험이있습니다. 나이많은 강아지의 삶에 대해
+            생각할수 있었으며, 가족으로서 곁을 지켰습니다. 현재는 10년넘는
+            고양이 두마리를 키우고 있습니다. 고양이에 대한 두려움을 바꾸게 된
+            계기이기도 하며 더불어 고양이보호자님의 생각을 조금이나마 알게
+            되었습니다. 평균 수명이 점점 가까워 오고 있어 조금이라도
+            우리아이들과 건강히 지내고 싶은 마음입니다. 노령묘,노령견에 대한
+            연구에 계속 관심이 가고, 연구 학회 활동도 지속적으로 하고 있습니다.
           </Contents2Text>
+          <Contents2Name>by. 김병선 대표원장</Contents2Name>
         </Contents2Wrap>
       </Toggle>
     </Wrap>
   );
 };
 
-const Name = styled.div`
+export const Name = styled.div`
   text-align: center;
   font-size: 27px;
   font-weight: 600;
@@ -134,7 +151,7 @@ const Name = styled.div`
   }
 `;
 
-const ImgWrap = styled.div`
+export const ImgWrap = styled.div`
   width: 913px;
   height: 490px;
   display: flex;
@@ -158,7 +175,7 @@ const ImgWrap = styled.div`
   }
 `;
 
-const VetImg = styled.img`
+export const VetImg = styled.img`
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px;
 
@@ -167,7 +184,7 @@ const VetImg = styled.img`
   }
 `;
 
-const Toggle = styled.div`
+export const Toggle = styled.div`
   width: 913px;
   height: auto;
   border-radius: 20px;
@@ -193,7 +210,7 @@ const Toggle = styled.div`
   }
 `;
 
-const ToggleTitle = styled.div`
+export const ToggleTitle = styled.div`
   height: 21px;
   width: 100%;
   font-size: 20px;
@@ -212,7 +229,7 @@ const ToggleTitle = styled.div`
   }
 `;
 
-const ToggleArrow = styled.img`
+export const ToggleArrow = styled.img`
   position: absolute;
   left: ${props => (props.isToggleOn ? '99.5%' : '101%')};
   top: ${props => (props.isToggleOn ? '5%' : '50%')};
@@ -237,7 +254,7 @@ const ToggleArrow = styled.img`
   }
 `;
 
-const ToggleIcon = styled.img`
+export const ToggleIcon = styled.img`
   position: absolute;
   left: -5.5%;
   top: 1%;
@@ -256,7 +273,7 @@ const ToggleIcon = styled.img`
   }
 `;
 
-const Contents1Wrap = styled.div`
+export const Contents1Wrap = styled.div`
   height: ${props => (props.isToggleOn ? 'auto' : '0')};
   display: grid;
   grid-template-columns: 30% 53%;
@@ -272,7 +289,7 @@ const Contents1Wrap = styled.div`
   }
 `;
 
-const Content1Img = styled.img`
+export const Content1Img = styled.img`
   border-radius: 20px;
   margin-top: 3vh;
 
@@ -287,24 +304,25 @@ const Content1Img = styled.img`
   }
 `;
 
-const ContentsTextWrap = styled.div`
+export const ContentsTextWrap = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 3vh;
   align-items: flex-start;
 `;
 
-const ContentsTitle = styled.div`
+export const ContentsTitle = styled.div`
   padding: 15px 30px;
   width: auto;
-  background-color: #e6efde;
+  background-color: ${props => props.themeColor};
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 17px;
   font-weight: 700;
-  color: #666666;
+  letter-spacing: 1px;
+  color: white;
   margin-bottom: 1vh;
 
   @media screen and (max-width: 700px) {
@@ -312,7 +330,7 @@ const ContentsTitle = styled.div`
   }
 `;
 
-const CheckTextWrap = styled.div`
+export const CheckTextWrap = styled.div`
   margin-top: 2vh;
   display: flex;
   align-items: flex-start;
@@ -322,15 +340,15 @@ const CheckTextWrap = styled.div`
   }
 `;
 
-const CheckIcon = styled.img`
+export const CheckIcon = styled.img`
   margin-right: 10px;
 `;
 
-const ChechTextBox = styled.div`
+export const ChechTextBox = styled.div`
   display: block;
 `;
 
-const CheckText = styled.div`
+export const CheckText = styled.div`
   font-size: 15px;
   color: #666666;
   margin-bottom: ${props => (props.marginBottomX ? '' : '5px')};
@@ -340,19 +358,32 @@ const CheckText = styled.div`
   }
 `;
 
-const Contents2Wrap = styled.div`
+export const Contents2Wrap = styled.div`
   height: ${props => (props.isToggleOn ? 'auto' : '0')};
   display: flex;
+  flex-direction: column;
   justify-content: center;
   overflow: hidden;
 `;
 
-const Contents2Text = styled.div`
-  font-size: 18px;
-  color: #666666;
+export const Contents2Text = styled.div`
+  font-size: 17px;
+  color: #707070;
   margin-top: 3vh;
-  line-height: 28px;
+  line-height: 30px;
 
+  @media screen and (max-width: 700px) {
+    font-size: 13px;
+    line-height: 22px;
+    margin-top: 2vh;
+  }
+`;
+
+export const Contents2Name = styled.div`
+  font-size: 18px;
+  margin-top: 20px;
+  font-weight: 500;
+  color: #686868;
   @media screen and (max-width: 700px) {
     font-size: 14px;
     line-height: 22px;

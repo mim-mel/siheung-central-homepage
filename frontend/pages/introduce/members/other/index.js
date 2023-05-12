@@ -12,22 +12,13 @@ const Other = () => {
         categoryName='members'
       />
       <MemberNav categoryName='other' />
-      <TechWrap>
+      <TechWrap marginBottom>
         <ImgBlock>
-          <Img src='/image/member-tech1.jpg' />
+          <Img src='/image/member-other1.jpg' />
           <NameBack>
-            <Name>직원 OOO</Name>
+            <Name>미용실장 오임경</Name>
           </NameBack>
         </ImgBlock>
-        <ImgBlock></ImgBlock>
-        <ImgBlock></ImgBlock>
-        <ImgBlock></ImgBlock>
-      </TechWrap>
-      <TechWrap marginBottom>
-        <ImgBlock></ImgBlock>
-        <ImgBlock></ImgBlock>
-        <ImgBlock></ImgBlock>
-        <ImgBlock></ImgBlock>
       </TechWrap>
     </Wrap>
   );
