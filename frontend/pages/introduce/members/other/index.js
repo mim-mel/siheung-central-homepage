@@ -19,6 +19,12 @@ const Other = () => {
             <Name>미용실장 오임경</Name>
           </NameBack>
         </ImgBlock>
+        <ImgBlock>
+          <Img src='/image/member-other2.jpg' />
+          <NameBack>
+            <Name>경영지원 실장 조세영</Name>
+          </NameBack>
+        </ImgBlock>
       </TechWrap>
     </Wrap>
   );

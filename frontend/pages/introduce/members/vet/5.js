@@ -111,8 +111,13 @@ const Vet5 = () => {
             <CheckTextWrap>
               <CheckIcon src='/image/member-vet5-checkicon.png' />
               <ChechTextBox>
-                <CheckText marginBottomX>서울 수의컨퍼런스 참석</CheckText>
-                <CheckText>경기 수의컨퍼런스 참석</CheckText>
+                <CheckText marginBottomX>
+                  세계수의학도협의회(IVSA) 참가
+                </CheckText>
+                <CheckText>서울임상수의학회 참가</CheckText>
+                <CheckText>강원대 사이언스페어&심포지엄 참가</CheckText>
+                <CheckText>한국실험동물학회 참가</CheckText>
+                <CheckText>충현 임상수의사 인턴 세미나 수료</CheckText>
               </ChechTextBox>
             </CheckTextWrap>
           </ContentsTextWrap>

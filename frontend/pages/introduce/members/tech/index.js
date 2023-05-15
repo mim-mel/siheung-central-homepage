@@ -34,7 +34,7 @@ const Tech = () => {
         <ImgBlock>
           <Img src='/image/member-tech4.jpg' />
           <NameBack>
-            <Name>테크니션 최유리</Name>
+            <Name>테크니션 심현진</Name>
           </NameBack>
         </ImgBlock>
       </TechWrap>

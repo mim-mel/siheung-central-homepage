@@ -68,12 +68,13 @@ const Vet1 = () => {
               <CheckIcon src='/image/member-vet1-checkicon.png' />
               <ChechTextBox>
                 <CheckText marginBottomX>
-                  서울 강동 24시 S동물의료센터 응급의학과장
+                  서울 24시 스카이동물의료센터 응급의학과장
                 </CheckText>
-                <CheckText>부천 24시 S동물병원 진료과장</CheckText>
-                <CheckText>안산 24시 K 동물병원 진료과장</CheckText>
-                <CheckText>인천 24시 S 동물의료센터 진료수의사</CheckText>
-                <CheckText>대전 24시 A 동물병원 인턴쉽</CheckText>
+                <CheckText>부천 24시 스카이동물병원 진료과장</CheckText>
+                <CheckText>안산 24시 가나동물병원 진료원장</CheckText>
+                <CheckText>인천 24시 스카이동물의료센터 진료수의사</CheckText>
+                <CheckText>대전 24시 아프리카 동물병원 인턴쉽</CheckText>
+                <CheckText>대전 충남대학교 동물병원 임상로테이션</CheckText>
               </ChechTextBox>
             </CheckTextWrap>
 
