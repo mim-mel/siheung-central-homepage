@@ -5,6 +5,7 @@ import Head from 'next/head';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import store, { persistor } from '@/redux/store/store';
+import 'react-quill/dist/quill.snow.css';
 
 export default function App({ Component, pageProps }) {
   return (

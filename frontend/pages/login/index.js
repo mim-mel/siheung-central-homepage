@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { loginUser, logoutUser } from '@/redux/reducer/userSlice';
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
+import axios from 'axios';
 
 const LoginPage = () => {
   const router = useRouter();
@@ -14,7 +15,7 @@ const LoginPage = () => {
     state => state.persistedReducer.userReducer.isLoggedIn
   );
 
-  const submitFormHandler = e => {
+  const submitFormHandler = async e => {
     e.preventDefault();
 
     const enteredId = idRef.current.value;
@@ -25,26 +26,24 @@ const LoginPage = () => {
       password: enteredPassword,
     };
 
-    fetch('/api/login', {
-      method: 'POST',
-      body: JSON.stringify(reqBody),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
-      .then(res => res.json())
-      .then(data => {
-        if (data.code === 1000) {
-          dispatch(
-            loginUser({
-              isLoggedIn: true,
-            })
-          );
-          router.push('/news/inform');
-        } else {
-          alert(data.message);
-        }
+    try {
+      const res = await axios.post('/api/login', reqBody, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
       });
+
+      if (res.data.code === 1000) {
+        dispatch(
+          loginUser({
+            isLoggedIn: true,
+          })
+        );
+        router.push('/news/notice');
+      }
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   const onLogout = e => {
