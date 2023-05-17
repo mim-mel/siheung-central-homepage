@@ -1,8 +1,6 @@
 import formidable from 'formidable';
-import fs from 'fs';
 import path from 'path';
-import multer from 'multer';
-import nc from 'next-connect';
+import fs from 'fs/promises';
 
 export const config = {
   api: {
@@ -10,66 +8,78 @@ export const config = {
   },
 };
 
-//multer 파일업로드
-const handler = nc();
+const buildNoticePath = () => {
+  return path.join(process.cwd(), 'data', 'noticeList.json');
+};
 
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, 'public/upload');
-  },
-  filename: function (req, file, cb) {
-    const nowDate = dayjs(Date.now()).format('YYMMDDHHMM');
-    cb(null, `${nowDate}_${file.originalname}`);
-  },
-  fileFilter: function (req, file, callback) {
-    var ext = path.extname(file.originalname);
-    if (ext !== '.png' && ext !== '.jpg' && ext !== '.jpeg') {
-      return callback(new Error('PNG, JPG만 업로드하세요'));
-    }
-    callback(null, true);
-  },
-  limits: {
-    fileSize: 1024 * 1024,
-  },
-});
+const extractNotice = async filePath => {
+  try {
+    const fileData = await fs.readFile(filePath);
+    const data = JSON.parse(fileData);
+    return data;
+  } catch (error) {
+    console.error('Error extracting notice:', error);
+    throw error;
+  }
+};
 
-let imgUpload = multer({
-  storage: storage,
-});
+const readFile = (req, saveLocally) => {
+  const options = {};
+  if (saveLocally) {
+    options.uploadDir = path.join(process.cwd(), 'public', 'image');
+    options.filename = (name, ext, path, form) => {
+      return Date.now().toString() + '_' + path.originalFilename;
+    };
+  }
+  options.maxFileSize = 4000 * 1024 * 1024;
+  const form = formidable(options);
+  return new Promise((resolve, reject) => {
+    form.parse(req, (err, fields, files) => {
+      if (err) reject(err);
+      resolve({ fields, files });
+    });
+  });
+};
 
-let uploadFile = imgUpload.single('file');
+const handler = async (req, res) => {
+  try {
+    const imageDir = path.join(process.cwd(), 'public', 'image');
+    await fs.mkdir(imageDir, { recursive: true });
+  } catch (error) {
+    console.error('Error creating image directory:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+    return;
+  }
 
-handler.use(uploadFile);
+  const { fields, files } = await readFile(req, true);
+  const { title, content } = fields;
 
-handler.post(async (res, req) => {
-  console.log('req', req.file);
-  console.log('req', req.body);
-  res.status(200).send('Uploded File');
-});
+  const fileKeys = Object.keys(files);
+  const firstFileKey = fileKeys[0]; // 첫 번째 파일의 키 가져오기
+  const firstFile = files[firstFileKey]; // 첫 번째 파일 가져오기
+  const filePathRelativeToPublic = firstFile.filepath.replace(
+    path.join(process.cwd(), 'public'),
+    ''
+  );
 
-// const upload = async (req, res) => {
-//   if (req.method === 'POST') {
-//     const form = formidable({ multiples: true });
+  try {
+    // 필요한 작업을 수행하고 새로운 응답 데이터를 생성합니다.
+    const responseData = {
+      title: title,
+      content: content,
+      firstFile: filePathRelativeToPublic, // 첫 번째 파일 정보 추가
+    };
 
-//     form.parse(req, async (error, fields, files) => {
-//       if (error) {
-//         res.status(500).json({ error: 'Error parsing form data' });
-//         return;
-//       }
+    const filePath = buildNoticePath();
+    const data = await extractNotice(filePath);
+    data.push(responseData);
+    await fs.writeFile(filePath, JSON.stringify(data));
 
-//       const { title, content } = fields;
-//       const { image } = files;
-
-//       try {
-//         const imageUrl = await uploadImage(image);
-//         res.status(200).json({ title, content, imageUrl });
-//       } catch (error) {
-//         res.status(500).json({ error: 'Error uploading image' });
-//       }
-//     });
-//   } else {
-//     res.status(400).json({ error: 'Invalid request method' });
-//   }
-// };
+    res.status(200).json(responseData);
+  } catch (error) {
+    console.error('Error reading image directory:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+};
 
 export default handler;
