@@ -1,4 +1,4 @@
-const onLogin = (req, res) => {
+const handler = (req, res) => {
   if (req.method === 'POST') {
     //프론트 사이드에서 받아온 데이터추출
     const id = req.body.id;
@@ -20,4 +20,4 @@ const onLogin = (req, res) => {
   }
 };
 
-export default onLogin;
+export default handler;
